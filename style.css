@@ -1,0 +1,17 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(247, 182, 85);
+}
+
+.content{
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap; 
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+p{
+    text-align: center;
+}
