@@ -1,17 +1,73 @@
+.liter-regular {
+    font-family: "Liter", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Liter', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(247, 182, 85);
+    margin: 0;
 }
 
-.content{
+h1, h2 {
+    text-align: center;
+}
+
+.container{
     display: flex;
-    flex-direction: column; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
     flex-wrap: wrap; 
-    width: 80vw;
-    margin: 0 auto;
-    padding: 1.5rem;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: 100vw;
+}
+
+.info-container{
+    flex: 1;
+    max-width: 45%;
+    min-width: 33%;
+    height: 200px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.info-container:hover{
+    background: #5596f7;
+    
+}
+.info-container span{
+    font-weight: bold;
+    font-size: 36px;
+    color: #b655f7;
+}
+.info-container p{
+    font-size: 22px;
 }
 
 p{
-    text-align: center;
+    margin: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center;
+    }
+
+    .info-container {
+        width: 80%; /* Wider on smaller screens */
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .info-container {
+        max-width: 80%; /* Wider on smaller screens */
+    }
 }
